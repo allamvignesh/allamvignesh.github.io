@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-weight: 400;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	overflow-y: hidden;
+}
+
+.header {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 12.5%;
+	width: 75%;
+}
+
+#logo {
+	width: 50%;
+	font-size: 1em;
+}
+
+.logo {
+	display: none;
+}
+
+.pri-nav {
+	margin-inline: auto;
+	width: 50%;
+	padding: 0.75rem;
+}
+
+.pri-nav > ul {
+	list-style: none;
+	transform: translateX(-50%);
+	transition: 600ms;
+	justify-content: center;
+}
+
+.flex {
+	display: flex;
+	gap: var(--gap, 2em)
+}
+
+.pri-nav li a {
+	text-decoration: none;
+	color: #484848;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.pri-nav li a::after {
+	content: "";
+	width: 0%;
+	height: 0.15em;
+	transition: width 200ms;
+	background: #484848;
+}
+
+.pri-nav li a.active {
+	color: #000;
+}
+
+.pri-nav li a:hover::after,
+.pri-nav li a.active::after {
+	width: 100%;
+}
+
+.sticking .logo {
+	display: block;
+}
+
+.sticking .pri-nav ul{
+	transform: translateX(0%);
+}
+
+section {
+	width: 75%;
+	height: 100vh;
+	margin-inline: auto;
+	scroll-snap-align: start;
+}
+
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+.container > * {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero > * {
+	width: 50%;
+}
+
+.profile__pic {
+	margin-inline: auto;
+	width: 80%;
+	aspect-ratio: 1/1;
+	background-image: url("images/profile.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 0 0 100% 100%;
+}
+
+.intro h2 {
+	font-size: 1em;
+	width: 50%;
+}
+
+.intro h1 {
+	font-size: 3em;
+}
+
+.intro .name {
+	color: #626262;
+}
+
+.intro p {
+	color: #484848;
+}
+
+.about {
+	width: 100%;
+	align-items: center;
+}
+
+.about > * {
+	width: 50%;
+	font-size: 1rem;
+}
+
+.about__profile__pic {
+	width: 80%;
+	aspect-ratio: 1/1;
+	background-image: url("images/profile.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.about .content {
+	max-width: 45ch;
+	margin-inline: auto;
+	display: flex;
+	gap: 0.5em;
+	flex-direction: column;
+}
+
+.about .content p {
+	max-width: 40ch;
+	color: #424242;
+}
+
+.about span {
+	color: #000
+}
+
+.about .enjoy {
+	color: #455100
+}
+
+.work h1 {
+	font-size: 4em;
+}
+
+.collab {
+	width: 100%;
+	align-items: center;
+}
+
+.collab > * {
+	width: 50%;
+}
+
+.collab__pic {
+	width: 80%;
+	aspect-ratio: 1/1;
+	background-image: url("images/profile.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.collab .form {
+	width: 75%;
+	margin-inline: auto;
+}
+
+.collab form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.name {
+	display: flex;
+	width: 100%;
+}
+
+.name > * {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin-right: 2em;
+}
+
+.mail {
+	display: flex;
+	flex-direction: column;
+	margin-right: 2em;
+}
+
+.message {
+	display: flex;
+	flex-direction: column;
+	margin-right: 2em;
+}
+
+.collab form .submit {
+	margin-right: 2em;
+}
+.collab .submit #submit {
+	width: 100%;
+}
