@@ -32,4 +32,23 @@ container.addEventListener('scroll', () => {
   const scrollHeight = document.querySelector(".container").scrollTop;
   let page = Math.round(scrollHeight / containerheight);
   toggleActivePage(page);
+
+  if (socialsList.classList.contains("socials__open")) {
+    if (0 < page < 3) {
+      socialsToggle();
+    }
+  }
+
+  if (socialsList.classList.contains("socials__closed")) {
+    if (page === 0 || page === 3) {
+      socialsToggle();
+    }
+  }
 })
+
+const socialsList = document.querySelector(".socials__list")
+
+function socialsToggle() {
+  socialsList.classList.toggle("socials__open")
+  socialsList.classList.toggle("socials__closed")
+}
