@@ -1,6 +1,6 @@
 const primaryHeader = document.querySelector(".header");
 const scrollWatcher = document.querySelector("#scrollWatcher");
-
+// 
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 
 const navObserver = new IntersectionObserver(
