@@ -11,7 +11,7 @@ const navObserver = new IntersectionObserver(
 
 navObserver.observe(scrollWatcher);
 
-const navList = document.querySelectorAll(".pri-nav ul li a")
+const navList = document.querySelectorAll(".pri-nav a")
 const sections = document.querySelectorAll("section")
 
 for (let i = 0; i < navList.length; i++) {
@@ -57,3 +57,18 @@ function socialsToggle() {
   socialsList.classList.toggle("socials__open")
   socialsList.classList.toggle("socials__closed")
 }
+
+const priNav = document.querySelector(".pri-nav")
+const navToggle = document.querySelector(".mobile-nav-toggle")
+
+navToggle.addEventListener("click", () => {
+    var visibility = priNav.getAttribute("data-visible")
+
+    if (visibility === "false") {
+        priNav.setAttribute("data-visible", true)
+        navToggle.setAttribute("aria-expanded", true)
+    } else {
+        priNav.setAttribute("data-visible", false)
+        navToggle.setAttribute("aria-expanded", false)
+    }
+})

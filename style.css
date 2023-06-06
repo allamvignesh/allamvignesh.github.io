@@ -25,24 +25,27 @@ body {
 	justify-content: space-between;
 	margin-left: 12.5%;
 	width: 75%;
+
+	z-index: 9999;
 }
 
 #logo {
 	width: 50%;
 	font-size: 1em;
+	padding: 0.75rem;
 }
 
 .logo {
 	display: none;
 }
 
-.pri-nav {
+.nav {
 	margin-inline: auto;
 	width: 50%;
 	padding: 0.75rem;
 }
 
-.pri-nav > ul {
+.pri-nav {
 	list-style: none;
 	transform: translateX(-50%);
 	transition: 600ms;
@@ -83,8 +86,56 @@ body {
 	display: block;
 }
 
-.sticking .pri-nav ul{
+.sticking .pri-nav {
 	transform: translateX(0%);
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 35em) {
+    .pri-nav {
+        --gap: 2em;
+        position: fixed;
+        transition: transform 350ms ease-out;
+    }
+
+	.sticking .pri-nav {
+		inset: 0 0 0 30%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        transform: translateX(100%);
+
+		background: hsla(0, 0%, 100%, 0.4);
+		backdrop-filter: blur(1rem);
+	}
+
+    .sticking .pri-nav[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .sticking .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url("images/hamberger.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: 0;
+        aspect-ratio: 1;
+        right: 2rem;
+
+        transition: background-image 350ms linear;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("images/close.svg");
+    }
 }
 
 section {
@@ -375,7 +426,7 @@ section {
 	transform: scaleX(1);
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 35em) {
 	.hero,
 	.about,
 	.collab {
