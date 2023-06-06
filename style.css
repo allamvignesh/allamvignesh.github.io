@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-/* this is a prototype */
+
 html {
 	scroll-behavior: smooth;
 }
@@ -88,14 +88,14 @@ body {
 
 section {
 	width: 75%;
-	height: 100vh;
+	min-height: 100vh;
 	margin-inline: auto;
 	scroll-snap-align: start;
 }
 
 .container {
 	scroll-snap-type: y mandatory;
-	overflow-y: scroll;
+	overflow: hidden scroll;
 	height: 100vh;
 }
 
@@ -113,6 +113,7 @@ section {
 
 .hero > * {
 	width: 50%;
+	transition: .8s ease-in-out;
 }
 
 .profile__pic {
@@ -143,6 +144,36 @@ section {
 	color: #484848;
 }
 
+.intro a {
+	background-color: #484848;
+	color: #fff;
+	padding-inline: .5em;
+	border-radius: 4px;
+
+	text-decoration: none;
+	font-size: .8em;
+}
+
+#home .intro {
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+#home .profile {
+	transform: translateX(50%);
+	opacity: 0;
+}
+
+#home.active .intro {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+#home.active .profile {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
 .about {
 	width: 100%;
 	align-items: center;
@@ -151,6 +182,7 @@ section {
 .about > * {
 	width: 50%;
 	font-size: 1rem;
+	transition: .8s ease-in-out;
 }
 
 .about__profile__pic {
@@ -182,6 +214,28 @@ section {
 .about .enjoy {
 	color: #455100
 }
+
+
+#about .about__pic {
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+#about .about_content {
+	transform: translateX(50%);
+	opacity: 0;
+}
+
+#about.active .about__pic {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+#about.active .about_content {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
 
 .work h1 {
 	font-size: 4em;
@@ -218,31 +272,26 @@ section {
 
 .name {
 	display: flex;
+	justify-content: space-between;
 	width: 100%;
 }
 
 .name > * {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
-	margin-right: 2em;
+	min-width: 45%;
 }
 
 .mail {
 	display: flex;
 	flex-direction: column;
-	margin-right: 2em;
 }
 
 .message {
 	display: flex;
 	flex-direction: column;
-	margin-right: 2em;
 }
 
-.collab form .submit {
-	margin-right: 2em;
-}
 .collab .submit #submit {
 	width: 100%;
 }
@@ -268,7 +317,7 @@ section {
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
-	transition: 500ms;
+	transition: 1s;
 }
 
 #socials__toggle {
@@ -278,13 +327,12 @@ section {
 	position: relative;
 	z-index: 1000;
 	transform: scaleX(-1);
-	transition: .5s;
+	transition: 1s;
 }
 
 .socials__links > * {
 	--space: 0.5em;
 	position: absolute;
-	transition: 500ms;
 }
 
 #socials__facebook {
@@ -318,6 +366,28 @@ section {
 	transform: translateX(0%) !important;
 }
 
+.socials__closed .socials__links button {
+	transform: rotate(-180deg) !important;
+}
+
 .socials__closed #socials__toggle {
 	transform: scaleX(1);
+}
+
+@media screen and (max-width: 768px) {
+	.hero,
+	.about,
+	.collab {
+		flex-direction: column;
+	}
+
+	.hero > *,
+	.about > *,
+	.collab > * {
+		width: 100%;
+	}
+
+	.collab .collab_profile {
+		display: none;
+	}
 }

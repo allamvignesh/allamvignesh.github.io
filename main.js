@@ -12,6 +12,7 @@ const navObserver = new IntersectionObserver(
 navObserver.observe(scrollWatcher);
 
 const navList = document.querySelectorAll(".pri-nav ul li a")
+const sections = document.querySelectorAll("section")
 
 for (let i = 0; i < navList.length; i++) {
   navList[i].onclick = () => {
@@ -21,9 +22,13 @@ for (let i = 0; i < navList.length; i++) {
 
 function toggleActivePage(page) {
   navList.forEach((link) => {
-    link.classList.remove("active");
+    link.classList.remove("active")
+  })
+  sections.forEach((section) => {
+    section.classList.remove("active")
   })
   navList[page].classList.add("active")
+  sections[page].classList.add("active")
 }
 
 const container = document.querySelector(".container")
