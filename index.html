@@ -66,27 +66,28 @@
 			<div class="collab_form">
 				<div class="form">
 					<h2>Get in touch</h2>
-					<form action="">
+					<form action="https://formsubmit.co/allam.vignesh@gmail.com" method="POST">
+						<input type="hidden" name="_next" value="https://allamvignesh.github.io/">
 						<div class="name">
 							<div class="fname">
 								<label for="">First name</label>
-								<input type="text" name="fname" id="">
+								<input type="text" name="fname" id="" required>
 							</div>
 							<div class="lname">
 								<label for="">Last name</label>
-								<input type="text" name="lname" id="">
+								<input type="text" name="lname" id="" required>
 							</div>
 						</div>
 						<div class="mail">
 							<label for="">Email address</label>
-							<input type="text" name="email" id="">
+							<input type="text" name="email" id="" required>
 						</div>
 						<div class="message">
 							<label for="">Message</label>
-							<textarea name="message" id="" rows="4"></textarea>
+							<textarea name="message" name="message" rows="4" required></textarea>
 						</div>
 						<div class="submit">
-							<input id="submit" type="button" value="Submit">
+							<button id="submit" type="submit">Send</button>
 						</div>
 					</form>
 				</div>
