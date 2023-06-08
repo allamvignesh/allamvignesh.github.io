@@ -29,6 +29,10 @@ function toggleActivePage(page) {
   })
   navList[page].classList.add("active")
   sections[page].classList.add("active")
+
+  if (priNav.getAttribute("data-visible") === "true") {
+    navToggle.click();
+  }
 }
 
 const container = document.querySelector(".container")
