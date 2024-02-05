@@ -35,10 +35,10 @@ function toggleActivePage(page) {
   }
 }
 
-const container = document.querySelector(".container")
+const container = document.querySelector("main")
 container.addEventListener('scroll', () => {
-  const containerheight = document.querySelector(".container").offsetHeight;
-  const scrollHeight = document.querySelector(".container").scrollTop;
+  const containerheight = document.querySelector("main").offsetHeight;
+  const scrollHeight = document.querySelector("main").scrollTop;
   let page = Math.round(scrollHeight / containerheight);
   toggleActivePage(page);
 
