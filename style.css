@@ -536,7 +536,7 @@ main > section {
 	border-radius: 100vh;
 	border: 3px solid var(--tertiary-color);
 
-	top: 0.5em;
+	top: 0em;
 	left: 0;
 	margin-left: -7px;
 }
@@ -555,13 +555,3 @@ main > section {
 	color: var(--tertiary-color);
 	padding-top: 0.25em;
 }
-/* 
-.timeline li h5 {
-	position: absolute;
-	top: 0.25em;
-	margin-left: -25%;
-}
-
-.timeline li:nth-child(even):after {
-
-} */
