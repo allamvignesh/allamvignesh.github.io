@@ -43,13 +43,13 @@ container.addEventListener('scroll', () => {
   toggleActivePage(page);
 
   if (socialsList.classList.contains("socials__open")) {
-    if (0 < page < 3) {
+    if (0 < page < 4) {
       socialsToggle();
     }
   }
 
   if (socialsList.classList.contains("socials__closed")) {
-    if (page === 0 || page === 3) {
+    if (page === 0 || page === 4) {
       socialsToggle();
     }
   }
