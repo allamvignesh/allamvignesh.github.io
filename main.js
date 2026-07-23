@@ -1,78 +1,66 @@
-const primaryHeader = document.querySelector(".header");
-const scrollWatcher = document.querySelector("#scrollWatcher");
-// 
-scrollWatcher.setAttribute("data-scroll-watcher", "");
+const root = document.documentElement;
+const header = document.querySelector(".site-header");
+const menuButton = document.querySelector(".menu-button");
+const navigation = document.querySelector(".primary-navigation");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeIcon = document.querySelector(".theme-icon");
+const year = document.querySelector("#current-year");
 
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    primaryHeader.classList.toggle("sticking", !entries[0].isIntersecting);
-  }
+const storedTheme = localStorage.getItem("portfolio-theme");
+const preferredLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+const initialTheme = storedTheme || (preferredLight ? "light" : "dark");
+
+function applyTheme(theme) {
+  root.dataset.theme = theme;
+  themeIcon.textContent = theme === "dark" ? "☼" : "☾";
+  themeToggle.setAttribute(
+    "aria-label",
+    theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+  );
+}
+
+applyTheme(initialTheme);
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+  applyTheme(nextTheme);
+  localStorage.setItem("portfolio-theme", nextTheme);
+});
+
+menuButton.addEventListener("click", () => {
+  const isOpen = navigation.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+});
+
+navigation.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navigation.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
+  });
+});
+
+window.addEventListener(
+  "scroll",
+  () => header.classList.toggle("scrolled", window.scrollY > 12),
+  { passive: true }
 );
 
-navObserver.observe(scrollWatcher);
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
 
-const navList = document.querySelectorAll(".pri-nav a")
-const sections = document.querySelectorAll("section")
+document.querySelectorAll(".reveal").forEach((element) => {
+  revealObserver.observe(element);
+});
 
-for (let i = 0; i < navList.length; i++) {
-  navList[i].onclick = () => {
-    toggleActivePage(i);
-  }
-}
-
-function toggleActivePage(page) {
-  navList.forEach((link) => {
-    link.classList.remove("active")
-  })
-  sections.forEach((section) => {
-    section.classList.remove("active")
-  })
-  navList[page].classList.add("active")
-  sections[page].classList.add("active")
-
-  if (priNav.getAttribute("data-visible") === "true") {
-    navToggle.click();
-  }
-}
-
-const container = document.querySelector("main")
-container.addEventListener('scroll', () => {
-  const containerheight = document.querySelector("main").offsetHeight;
-  const scrollHeight = document.querySelector("main").scrollTop;
-  let page = Math.round(scrollHeight / containerheight);
-  toggleActivePage(page);
-
-  if (socialsList.classList.contains("socials__open")) {
-    if (0 < page < 4) {
-      socialsToggle();
-    }
-  }
-
-  if (socialsList.classList.contains("socials__closed")) {
-    if (page === 0 || page === 4) {
-      socialsToggle();
-    }
-  }
-})
-
-const socialsList = document.querySelector(".socials__list")
-
-function socialsToggle() {
-  socialsList.classList.toggle("socials__open")
-  socialsList.classList.toggle("socials__closed")
-}
-
-const priNav = document.querySelector(".pri-nav")
-const navToggle = document.querySelector(".mobile-nav-toggle")
-
-navToggle.addEventListener("click", () => {
-    var visibility = priNav.getAttribute("data-visible")
-
-    if (visibility === "false") {
-        priNav.setAttribute("data-visible", true)
-        navToggle.setAttribute("aria-expanded", true)
-    } else {
-        priNav.setAttribute("data-visible", false)
-        navToggle.setAttribute("aria-expanded", false)
-    }
-})
+year.textContent = new Date().getFullYear();

@@ -1,161 +1,467 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<script src="main.js" defer></script>
-	<title>Hello</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vignesh Allam | Robotics Software</title>
+  <meta
+    name="description"
+    content="Robotics software portfolio of Vignesh Allam, an M.Sc. AIIS student at the University of Bremen working with ROS 2, navigation, motion planning, manipulation, Giskard, and Coraplex."
+  >
+  <meta name="author" content="Vignesh Allam">
+  <meta name="theme-color" content="#07111f">
+
+  <meta property="og:title" content="Vignesh Allam | Robotics Software">
+  <meta
+    property="og:description"
+    content="ROS 2, autonomous navigation, robot manipulation, motion planning, and robotics systems integration."
+  >
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
+
 <body>
-	<header class="header">
-		<h2 id="logo"><span class="logo">Hello</span></h2>
-        <button class="mobile-nav-toggle" aria-controls="pri-nav" aria-expanded="false"></button>
-		<nav class="nav">
-			<ul id="pri-nav" class="pri-nav flex" data-visible="false">
-				<li><a href="#home" class="active">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#timeline">|</a></li>
-				<li><a href="#work">Work</a></li>
-				<li><a href="#collab">Collab</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-	<section id="home" class="active">
-		<div class="hero flex">
-			<div class="intro">
-				<h2 id="scrollWatcher">Hello,</h2>
-				<h1><span class="name">I'm</span> Vignesh Allam</h1>
-				<p>An Enthusiastic Python Developer</p>
-				<a href="#collab">work with me</a>
-			</div>
-			<div class="profile">
-				<div class="profile__pic">
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="about">
-		<div class="about flex">
-			<div class="about__pic">
-				<div class="about__profile__pic"></div>
-			</div>
-			<div class="about_content">
-				<div class="content">
-					<p>short biography</p>
-					<h2>Born in 2004. Raised in a small town in India. Started work in 2022.</h2>
-					<p>I'm <span>Vignesh Allam</span>, a multi-disciplinary <span>python developer</span> from <span>India</span>, currently working on improving my ai and ml skills.</p>
-					<p>Proficient in <span>web development</span>, <span>game design</span>, <span>web scraping</span>.</p>
-					<p>I enjoy a cup of cold coffee in a freezing room watching romantic TV shows & action movies. Playing games or do anything music related.</p>
-					<p><span class="enjoy">Live a simple life.<br>Art. Food. Whatever. Enjoy the Beauty of it.</span></p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="timeline" class="snapped_sec">
-		<ul class="timeline">
-			<li>
-				<h5>2024</h5>
-				<h4>present</h4>
-			</li>
-			<li>
-				<h5>2023</h5>
-				<h4>RedHat Certified System Administrator</h4>
-				<p>Scored 300/300 in EX200 RHCSA</p>
-			</li>
-			<li>
-				<h5>2023</h5>
-				<h4>UBERTech CTF'23</h4>
-				<p>Secured 1st place in CTF conducted by SRM Vadapalani</p>
-			</li>
-			<li>
-				<h5>2023</h5>
-				<h4>SIST CTF'23</h4>
-				<p>Secured 3rd place in first ever CTF conducted by Sathyabama</p>
-			</li>
-			<li>
-				<h5>2021</h5>
-				<h4>Sathyabama Institute of Science and Technology</h4>
-				<p>Pursuing Bachelor of Engineering in Computer Science Engineering with Specialization in Artificial Intelligence and Machine Learning</p>
-			</li>
-			<li>
-				<h5>2021</h5>
-				<h4>Sri Sathya Sai Higher Secondary School</h4>
-				<p>Completed Secondary Education in MPC CS</p>
-			</li>
-			<li>
-				<h5>2019</h5>
-				<h4>Sri Sathya Sai Higher Secondary School</h4>
-				<p>Completed 10th</p>
-			</li>
-			<li>
-				<h4>Born</h4>
-			</li>
-		</ul>
-		
-	</section>
-	<section id="work">
-		<div class="work">
-			<div class="project">
-				<h1>This is a prototype.</h1>
-			</div>
-			<div class="project">
-				<h1>Coming soon.</h1>
-			</div>
-		</div>
-	</section>
-	<section id="collab">
-		<div class="collab flex">
-			<div class="collab_profile">
-				<div class="collab__pic"></div>
-			</div>
-			<div class="collab_form">
-				<div class="form">
-					<h2>Get in touch</h2>
-					<form action="https://formsubmit.co/01fb1912f67c03a7c9528e72459cc67e" method="POST">
-						<input type="hidden" name="_next" value="https://allamvignesh.github.io/">
-						<div class="name">
-							<div class="fname">
-								<label for="">First name</label>
-								<input type="text" name="fname" id="" required>
-							</div>
-							<div class="lname">
-								<label for="">Last name</label>
-								<input type="text" name="lname" id="" required>
-							</div>
-						</div>
-						<div class="mail">
-							<label for="">Email address</label>
-							<input type="text" name="email" id="" required>
-						</div>
-						<div class="message">
-							<label for="">Message</label>
-							<textarea name="message" name="message" rows="4" required></textarea>
-						</div>
-						<div class="submit">
-							<button id="submit" type="submit">Send</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-	<div class="socials">
-		<div class="socials__list flex socials__open">
-			<div class="toggle">
-				<button id="socials__toggle" onclick="socialsToggle()"></button>
-			</div>
-			<div class="socials__links">
-				<a href="https://www.facebook.com/profile.php?id=100014266277267" target="_blank" rel="noopener noreferrer"><button id="socials__facebook"></button></a>
-				<a href="https://twitter.com/VigneshAllam" target="_blank" rel="noopener noreferrer"><button id="socials__twitter"></button></a>
-				<a href="https://www.instagram.com/vigneshallam" target="_blank" rel="noopener noreferrer"><button id="socials__insta"></button></a>
-				<a href="https://www.linkedin.com/in/vignesh-allam" target="_blank" rel="noopener noreferrer"><button id="socials__linkedin"></button></a>
-				<a href="https://github.com/allamvigne.sh" target="_blank" rel="noopener noreferrer"><button id="socials__github"></button></a>
-			</div>
-		</div>
-	</div>
-	</main>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Vignesh Allam home">
+        <span class="brand-mark" aria-hidden="true">VA</span>
+        <span>Vignesh Allam</span>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-navigation" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="assets/Vignesh_Allam_Robotics_CV.pdf" target="_blank" rel="noopener">
+          CV
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+          <span class="theme-icon" aria-hidden="true">☼</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="availability">
+            <span class="status-dot" aria-hidden="true"></span>
+            Seeking robotics software internships
+          </div>
+
+          <p class="eyebrow">M.Sc. AIIS · University of Bremen</p>
+          <h1>
+            I build software that helps
+            <span>robots plan, move, and act.</span>
+          </h1>
+
+          <p class="hero-text">
+            I am a robotics-focused master's student working with ROS 2,
+            autonomous navigation, motion planning, robot manipulation, and
+            integration between perception and execution systems.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View robotics projects</a>
+            <a class="button secondary" href="assets/Vignesh_Allam_Robotics_CV.pdf" target="_blank" rel="noopener">
+              Download CV
+            </a>
+          </div>
+
+          <div class="hero-links" aria-label="Professional links">
+            <a href="https://github.com/allamvignesh" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/vignesh-allam" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="mailto:allam.vignesh@gmail.com">Email ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Stylised robotics software diagram">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span></span><span></span><span></span>
+              <p>robotics_stack.yaml</p>
+            </div>
+            <div class="terminal-body">
+              <p><span class="code-muted">profile:</span> robotics_software</p>
+              <p><span class="code-muted">middleware:</span> ROS_2</p>
+              <p><span class="code-muted">focus:</span></p>
+              <p class="code-indent">- navigation</p>
+              <p class="code-indent">- motion_planning</p>
+              <p class="code-indent">- manipulation</p>
+              <p class="code-indent">- systems_integration</p>
+              <p><span class="code-muted">status:</span> <span class="code-green">ready_to_build</span></p>
+            </div>
+          </div>
+
+          <div class="robot-map" aria-hidden="true">
+            <div class="map-grid"></div>
+            <div class="map-obstacle obstacle-a"></div>
+            <div class="map-obstacle obstacle-b"></div>
+            <div class="map-obstacle obstacle-c"></div>
+            <svg viewBox="0 0 420 220" role="presentation">
+              <path class="route" d="M44,174 C94,168 91,105 149,111 S208,169 252,129 S302,58 377,52"></path>
+              <circle class="route-start" cx="44" cy="174" r="7"></circle>
+              <circle class="route-goal" cx="377" cy="52" r="9"></circle>
+            </svg>
+            <div class="robot-node">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="signal-strip" aria-label="Core technologies">
+      <div class="container signal-list">
+        <span>ROS 2</span>
+        <span>Python</span>
+        <span>C++</span>
+        <span>Giskard</span>
+        <span>Coraplex</span>
+        <span>TF2</span>
+        <span>URDF</span>
+        <span>PyBullet</span>
+        <span>MuJoCo</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Robotics projects</h2>
+          <p>
+            Projects are presented around my actual contribution, especially
+            where the work was completed as part of a team.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card featured reveal">
+            <div class="project-topline">
+              <span class="project-index">01</span>
+              <span class="project-type">Real robot · Team project</span>
+            </div>
+
+            <div class="project-graphic dual-arm" aria-hidden="true">
+              <div class="arm arm-left">
+                <span class="joint joint-1"></span>
+                <span class="joint joint-2"></span>
+                <span class="gripper"></span>
+              </div>
+              <div class="arm arm-right">
+                <span class="joint joint-1"></span>
+                <span class="joint joint-2"></span>
+                <span class="gripper"></span>
+              </div>
+              <div class="cube cube-one"></div>
+              <div class="cube cube-two"></div>
+              <div class="table-line"></div>
+            </div>
+
+            <div class="project-content">
+              <p class="project-kicker">Manipulation and execution</p>
+              <h3>Tracy Dual-Arm Manipulation</h3>
+              <p>
+                Planning and integration work for a dual-UR10e platform using
+                Giskard and Coraplex, with real Robotiq gripper control and
+                higher-level manipulation behaviours.
+              </p>
+
+              <div class="contribution">
+                <strong>My contribution</strong>
+                <p>
+                  Integrated ROS 2 gripper actions into the execution stack,
+                  developed alternative real-hardware motion mappings, worked
+                  on arm poses and handover behaviour, and connected
+                  perception-team outputs to manipulation tasks.
+                </p>
+              </div>
+
+              <ul class="project-points">
+                <li>ROS 2 action clients for parallel grippers</li>
+                <li>Giskard-compatible execution integration</li>
+                <li>Pick-and-place, stacking, and handover workflows</li>
+              </ul>
+
+              <div class="tags">
+                <span>ROS 2</span><span>Giskard</span><span>Coraplex</span>
+                <span>UR10e</span><span>Python</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="project-index">02</span>
+              <span class="project-type">Mobile robotics · Team project</span>
+            </div>
+
+            <div class="project-content">
+              <p class="project-kicker">Autonomous navigation</p>
+              <h3>Tortugabot Navigation Planner</h3>
+              <p>
+                A custom navigation stack built without Nav2 for a mobile robot
+                using live occupancy-grid maps and RViz goal input.
+              </p>
+
+              <div class="contribution">
+                <strong>My contribution</strong>
+                <p>
+                  Implemented A* path planning, map/grid conversions, obstacle
+                  inflation, path simplification, waypoint progression, and
+                  planning-supervisor logic for communication with the motion
+                  controller.
+                </p>
+              </div>
+
+              <div class="tags">
+                <span>ROS 2</span><span>A*</span><span>SLAM Toolbox</span>
+                <span>Occupancy Grid</span><span>RViz2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="project-index">03</span>
+              <span class="project-type">Simulation · University project</span>
+            </div>
+
+            <div class="project-content">
+              <p class="project-kicker">Planning and integration</p>
+              <h3>Navigate-to-Grasp Mobile Manipulator</h3>
+              <p>
+                An end-to-end PyBullet project in which a mobile manipulator
+                navigates to a table and grasps a target object.
+              </p>
+
+              <div class="contribution">
+                <strong>My contribution</strong>
+                <p>
+                  Worked primarily on navigation, obstacle avoidance, base
+                  positioning, inverse-kinematics execution, and integration of
+                  detected object poses into the grasp sequence.
+                </p>
+              </div>
+
+              <div class="tags">
+                <span>PyBullet</span><span>Python</span><span>IK</span>
+                <span>Navigation</span><span>Integration</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="project-index">04</span>
+              <span class="project-type">Robotics data · ML project</span>
+            </div>
+
+            <div class="project-content">
+              <p class="project-kicker">Robot diagnostics</p>
+              <h3>Anomaly Detection in ROS Bag Data</h3>
+              <p>
+                A robotics data-analysis project focused on identifying
+                abnormal behaviour in recorded ROS topic data.
+              </p>
+
+              <div class="contribution">
+                <strong>Project scope</strong>
+                <p>
+                  Extracted and prepared time-series data from robot recordings,
+                  explored system behaviour, and applied an anomaly-detection
+                  workflow with visual analysis of the results.
+                </p>
+              </div>
+
+              <div class="tags">
+                <span>ROS Bag</span><span>Python</span><span>Time Series</span>
+                <span>Machine Learning</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="project-index">05</span>
+              <span class="project-type">Earlier technical work</span>
+            </div>
+
+            <div class="project-content">
+              <p class="project-kicker">Computer vision and 3D</p>
+              <h3>2D Floorplan to Interactive 3D/AR</h3>
+              <p>
+                A Django application that converts floorplan images into 3D
+                models using image processing and a headless Blender pipeline.
+              </p>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/allamvignesh/2D-to-3D-floorplan-and-Augmentation"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View repository ↗
+                </a>
+              </div>
+
+              <div class="tags">
+                <span>Django</span><span>OpenCV</span><span>Blender</span>
+                <span>GLTF</span><span>AR</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Technical toolkit</p>
+          <h2>What I work with</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <span class="skill-number">01</span>
+            <h3>Robotics software</h3>
+            <p>ROS 2 Jazzy, rclpy, TF2, URDF, RViz2, actions, services, topics, lifecycle-aware integration.</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-number">02</span>
+            <h3>Planning and navigation</h3>
+            <p>A*, occupancy grids, obstacle inflation, waypoint management, motion-planning integration, Giskard.</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-number">03</span>
+            <h3>Programming</h3>
+            <p>Python, C++, C, object-oriented design, multithreading, Linux/Bash, Git, CMake.</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-number">04</span>
+            <h3>Simulation and ML</h3>
+            <p>PyBullet, MuJoCo, OpenCV, PyTorch, Transformers, scikit-learn, NumPy, pandas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>Robotics systems, not isolated demos.</h2>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="large-copy">
+            I enjoy working at the boundary between algorithms and the physical
+            robot: connecting planners, motion controllers, robot models,
+            perception outputs, and hardware interfaces into one reliable
+            behaviour.
+          </p>
+          <p>
+            I am currently pursuing an M.Sc. in Artificial Intelligence and
+            Intelligent Systems at the University of Bremen, with a planned
+            focus on Cognition-Enabled Robotics. My goal is to grow into a
+            robotics software engineer working on autonomous robots,
+            manipulation, and intelligent planning systems.
+          </p>
+
+          <div class="education-list">
+            <div>
+              <span>2025 – Present</span>
+              <h3>M.Sc. Artificial Intelligence and Intelligent Systems</h3>
+              <p>University of Bremen · Bremen, Germany</p>
+            </div>
+            <div>
+              <span>2021 – 2025</span>
+              <h3>B.E. CSE — Artificial Intelligence and Machine Learning</h3>
+              <p>Sathyabama Institute of Science and Technology · Chennai, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section achievements-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Additional strengths</p>
+          <h2>Achievements and languages</h2>
+        </div>
+
+        <div class="achievement-grid">
+          <article class="achievement reveal">
+            <strong>1st place</strong>
+            <p>UBERTECH 2022 Capture the Flag competition</p>
+          </article>
+          <article class="achievement reveal">
+            <strong>2nd place</strong>
+            <p>Code Combat 2023 programming competition</p>
+          </article>
+          <article class="achievement reveal">
+            <strong>English C1</strong>
+            <p>IELTS Academic: 7.0</p>
+          </article>
+          <article class="achievement reveal">
+            <strong>German A2</strong>
+            <p>Basic working proficiency</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card reveal">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Looking for a robotics software intern?</h2>
+          <p>
+            I am interested in internship opportunities involving ROS 2,
+            autonomous navigation, motion planning, manipulation, and robotics
+            systems integration.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:allam.vignesh@gmail.com">Send an email</a>
+          <a class="button secondary" href="assets/Vignesh_Allam_Robotics_CV.pdf" target="_blank" rel="noopener">
+            Open CV
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="current-year"></span> Vignesh Allam</p>
+      <p>Built for robotics software opportunities.</p>
+    </div>
+  </footer>
 </body>
 </html>
